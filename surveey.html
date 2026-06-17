@@ -78,37 +78,41 @@
 <div class="form-container">
     <h1>Student Survey Form</h1>
 
-    <form action="thankyou.html">
+    <!-- ⚠️ ATTENTION: Replace YOUR_FORM_ID with the code from your Formspree account -->
+    <form action="https://formspree.io" method="POST">
+
+        <!-- Hidden input tells Formspree where to send users after they submit -->
+        <input type="hidden" name="_next" value="https://github.io">
 
         <label>Full Name:</label>
-        <input type="text" required placeholder="Enter your full name">
+        <input type="text" name="Full Name" required placeholder="Enter your full name">
 
         <label>Department:</label>
-        <input type="text" required placeholder="e.g., Computer Science, Engineering">
+        <input type="text" name="Department" required placeholder="e.g., Computer Science, Engineering">
 
         <label>Field of Study / Major:</label>
-        <input type="text" required placeholder="e.g., Software Engineering, Information Technology">
+        <input type="text" name="Major" required placeholder="e.g., Software Engineering, Information Technology">
 
         <label>Which emerging technology do you use most frequently?</label>
-        <select required>
+        <select name="Most Used Tech" required>
             <option value="" disabled selected>Select an option</option>
-            <option>Artificial Intelligence</option>
-            <option>Cloud Computing</option>
-            <option>Blockchain</option>
-            <option>Internet of Things</option>
-            <option>Virtual Reality</option>
+            <option value="Artificial Intelligence">Artificial Intelligence</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            <option value="Blockchain">Blockchain</option>
+            <option value="Internet of Things">Internet of Things</option>
+            <option value="Virtual Reality">Virtual Reality</option>
         </select>
 
         <label>What is your main purpose for using emerging technologies?</label>
         <div class="radio-group">
-            <div class="radio-option"><input type="radio" name="purpose" required> Academic Research</div>
-            <div class="radio-option"><input type="radio" name="purpose"> Assignments and Projects</div>
-            <div class="radio-option"><input type="radio" name="purpose"> Communication</div>
-            <div class="radio-option"><input type="radio" name="purpose"> Entertainment</div>
+            <div class="radio-option"><input type="radio" name="Primary Purpose" value="Academic Research" required> Academic Research</div>
+            <div class="radio-option"><input type="radio" name="Primary Purpose" value="Assignments and Projects"> Assignments and Projects</div>
+            <div class="radio-option"><input type="radio" name="Primary Purpose" value="Communication"> Communication</div>
+            <div class="radio-option"><input type="radio" name="Primary Purpose" value="Entertainment"> Entertainment</div>
         </div>
 
         <label>Additional Comments:</label>
-        <textarea rows="5" placeholder="Share any extra insights here..."></textarea>
+        <textarea name="Comments" rows="5" placeholder="Share any extra insights here..."></textarea>
 
         <input type="submit" value="Submit Survey">
 

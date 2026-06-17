@@ -1,46 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f7fafc;
+            color: #2d3748;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05), 0 10px 25px rgba(0,0,0,0.08);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #4a5568;
+            margin-top: 0;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: 600;
+            color: #4a5568;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #cbd5e0;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        .radio-group {
+            margin-top: 10px;
+        }
+        .radio-option {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .radio-option input {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            margin-top: 30px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #00f2fe;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Student Survey Form</h1>
+<div class="form-container">
+    <h1>Student Survey Form</h1>
 
-<form action="thankyou.html">
+    <form action="thankyou.html">
 
-    <label>Full Name:</label><br>
-    <input type="text" required><br><br>
+        <label>Full Name:</label>
+        <input type="text" required placeholder="Enter your full name">
 
-    <label>Which emerging technology do you use most frequently?</label><br>
+        <label>Department:</label>
+        <input type="text" required placeholder="e.g., Computer Science, Engineering">
 
-    <select required>
-        <option>Artificial Intelligence</option>
-        <option>Cloud Computing</option>
-        <option>Blockchain</option>
-        <option>Internet of Things</option>
-        <option>Virtual Reality</option>
-    </select>
+        <label>Field of Study / Major:</label>
+        <input type="text" required placeholder="e.g., Software Engineering, Information Technology">
 
-    <br><br>
+        <label>Which emerging technology do you use most frequently?</label>
+        <select required>
+            <option value="" disabled selected>Select an option</option>
+            <option>Artificial Intelligence</option>
+            <option>Cloud Computing</option>
+            <option>Blockchain</option>
+            <option>Internet of Things</option>
+            <option>Virtual Reality</option>
+        </select>
 
-    <label>What is your main purpose for using emerging technologies?</label><br>
+        <label>What is your main purpose for using emerging technologies?</label>
+        <div class="radio-group">
+            <div class="radio-option"><input type="radio" name="purpose" required> Academic Research</div>
+            <div class="radio-option"><input type="radio" name="purpose"> Assignments and Projects</div>
+            <div class="radio-option"><input type="radio" name="purpose"> Communication</div>
+            <div class="radio-option"><input type="radio" name="purpose"> Entertainment</div>
+        </div>
 
-    <input type="radio" name="purpose"> Academic Research<br>
-    <input type="radio" name="purpose"> Assignments and Projects<br>
-    <input type="radio" name="purpose"> Communication<br>
-    <input type="radio" name="purpose"> Entertainment<br>
+        <label>Additional Comments:</label>
+        <textarea rows="5" placeholder="Share any extra insights here..."></textarea>
 
-    <br>
+        <input type="submit" value="Submit Survey">
 
-    <label>Additional Comments:</label><br>
-    <textarea rows="5" cols="40"></textarea>
-
-    <br><br>
-
-    <input type="submit" value="Submit Survey">
-
-</form>
+    </form>
+</div>
 
 </body>
 </html>

@@ -1,21 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emerging Technology Survey</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            font-size: 2.3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            color: #e2e8f0;
+        }
+        button {
+            background: linear-gradient(to right, #00f2fe, #4facfe);
+            color: #fff;
+            border: none;
+            padding: 16px 45px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.6);
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Survey on the Use of Emerging Technologies Among Students</h1>
-
-    <p>
-        This survey aims to investigate how students use emerging
-        technologies such as Artificial Intelligence, Cloud Computing,
-        Blockchain, and Virtual Reality.
-    </p>
-
-    <a href="survey.html">
-        <button>Start Survey</button>
-    </a>
+    <div class="container">
+        <h1>Survey on the Use of Emerging Technologies</h1>
+        <p>
+            This survey investigates how students interact with and utilize emerging
+            technologies such as Artificial Intelligence, Cloud Computing,
+            Blockchain, and Virtual Reality in their academic journeys.
+        </p>
+        <a href="survey.html">
+            <button>Start Survey</button>
+        </a>
+    </div>
 
 </body>
 </html>
